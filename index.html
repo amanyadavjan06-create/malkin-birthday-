@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body { margin: 0; padding: 0; background: #fff0f5; font-family: sans-serif; overflow: hidden; }
+    .page { display: none; height: 100vh; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+    .page.active { display: flex; }
+    .heart-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+    .heart { position: absolute; color: #ff69b4; animation: float 5s linear infinite; font-size: 20px; }
+    @keyframes float { 0% { transform: translateY(100vh); opacity: 1; } 100% { transform: translateY(-10vh); opacity: 0; } }
+    button { margin-top: 20px; padding: 10px 25px; border-radius: 20px; border: none; background: #ff1493; color: white; cursor: pointer; font-size: 1.2rem; }
+</style>
+</head>
+<body>
+
+<div class="heart-bg" id="hearts"></div>
+
+<div id="pages">
+    <!-- Page 1 -->
+    <div class="page active" id="p1" style="font-family: 'Georgia';">
+        <h1>A Special Day for a Special Person</h1>
+        <p>My Dearest Malkin,✨💗 Today is not just another day on the calendar. It is one of the most beautiful days of the year💓 because it is the day God blessed this world with someone as wonderful as you Before anything else.✨</p>
+        <button onclick="next(2)">Next ➡️</button>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page" id="p2" style="font-family: 'Verdana';">
+        <h1>The Reason You Are So Special to Me</h1>
+        <p>My Dearest Malkin,💕 If someone ever asked me what makes you so special, I honestly don't think I could✨💕 answer with just one reason. There are so many little things about you that make you💝💖</p>
+        <button onclick="next(3)">Next ➡️</button>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page" id="p3" style="font-family: 'Courier New';">
+        <h1>Every Little Memory with You</h1>
+        <p>My Sweetest Malkin,🤭 When people think about beautiful memories, they often remember big celebrations😭 or unforgettable bond. But when I think about my favorite memories, I think about the😈</p>
+        <button onclick="next(4)">Next ➡️</button>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page" id="p4" style="font-family: 'Times New Roman';">
+        <h1>Your Smile Is My Favorite View</h1>
+        <p>My Dearest Malkin,💗. There are many beautiful things in this world—the stars in the night sky, colorful✨ flowers in spring, the calmness of the ocean, and the beauty of sunrise. Yet, whenever💓</p>
+        <button onclick="next(5)">Next ➡️</button>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="page" id="p5" style="font-family: 'Arial';">
+        <h1>My Silent Prayers for You</h1>
+        <p>My Dearest Malkin,😭 Every time I think about you, I quietly pray that God fills your life with endless💙💗 happiness. I pray that your mornings begin with hope, your afternoons are filled with💖</p>
+        <button onclick="next(6)">Next ➡️</button>
+    </div>
+
+    <!-- Page 6 -->
+    <div class="page" id="p6" style="font-family: 'Impact';">
+        <h1>Things I Want You to Always Remember</h1>
+        <p>My Dearest Malkin,❤ First of all, always remember that you are enough. You never have to become someone💙 else just to make people like you. The people who truly care about you will always love💖 and respect you for who you are. Your kindness, your honesty, your beautiful heart,💗</p>
+        <button onclick="next(7)">Next ➡️</button>
+    </div>
+
+    <!-- Page 7 -->
+    <div class="page" id="p7" style="font-family: 'Trebuchet MS';">
+        <h1>Thank You for Being You</h1>
+        <p>My Dearest Malkin,🥰 Thank you for coming into my life and making it brighter in ways you may never even realize🤧 Sometimes people don't understand how much they mean to someone else,</p>
+        <button onclick="next(8)">Next ➡️</button>
+    </div>
+
+    <!-- Page 8 -->
+    <div class="page" id="p8" style="font-family: 'Lucida Console';">
+        <h1>My Heart's Little Confession</h1>
+        <p>My Dearest Malkin,💚 I don't know exactly when it happened. Maybe it was during one of our conversations, maybe it was when❤ I saw your beautiful smile, or maybe it was through all the little moments we shared together.</p>
+        <button onclick="next(9)">Next ➡️</button>
+    </div>
+
+    <!-- Page 9 -->
+    <div class="page" id="p9" style="font-family: 'Comic Sans MS';">
+        <h1>My Wishes for Your Future</h1>
+        <p>My Dearest Malkin,💝 My first wish for you is that you always stay healthy. Health is the greatest blessing anyone can have💓 I pray that God gives you the strength to chase every dream, enjoy every beautiful moment, and live each day❤</p>
+        <button onclick="next(10)">Next ➡️</button>
+    </div>
+
+    <!-- Page 10 -->
+    <div class="page" id="p10" style="font-family: 'Tahoma';">
+        <h1>No Matter What Happens...</h1>
+        <p>My Dearest Malkin,😈 We never truly know what tomorrow has planned for us. But even with all those ✨ uncertainties, there are a few things I hope never change.❤ No matter where life takes you...💓 No matter how busy your days become...💝 No matter how many new people you meet...💗</p>
+        <button onclick="next(11)">Next ➡️</button>
+    </div>
+
+    <!-- Page 11 -->
+    <div class="page" id="p11" style="font-family: 'Bookman';">
+        <h1>A Letter from My Heart</h1>
+        <p>My Dearest Malkin,💌 You may never fully understand how much happiness your presence has brought into my life. There have been countless💖 moments when your smile became my reason to smile. There have been days when a simple message💕 from you made an ordinary day feel extraordinary.</p>
+        <button onclick="next(12)">Next ➡️</button>
+    </div>
+
+    <!-- Page 12 -->
+    <div class="page" id="p12" style="font-family: 'cursive';">
+        <h1>Happy Birthday, My Malkin ❤️</h1>
+        <p>My Dearest Malkin,❤ When you first started reading these pages, they were simply words on paper. But I hope that by the time✨ you've reached this page, you've felt the emotions hidden behind every sentence.</p>
+    </div>
+</div>
+
+<script>
+    function next(n) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('p' + n).classList.add('active');
+    }
+    function createHeart() {
+        const h = document.createElement('div');
+        h.className = 'heart';
+        h.innerHTML = '💖';
+        h.style.left = Math.random() * 100 + 'vw';
+        h.style.animationDuration = Math.random() * 3 + 2 + 's';
+        document.getElementById('hearts').appendChild(h);
+        setTimeout(() => h.remove(), 5000);
+    }
+    setInterval(createHeart, 300);
+</script>
+</body>
+</html>
